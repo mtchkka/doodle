@@ -1,0 +1,52 @@
+Zde je opravený text s úpravami gramatiky a logické návaznosti, následovaný stručným shrnutím.
+
+## Opravený text
+
+**RPG Hra**
+
+Předtím, než začnu psát jakýkoli kód, je zapotřebí mít strukturu nebo alespoň nápad, co budu programovat.
+
+**Vizuální styl:**
+Hra bude vypsána v ASCII Artu. Menu, lobby, inventář apod. budou vykresleny v TUI (Text User Interface), ale nejdříve se zaměřím čistě na mechaniky hry.
+*Poznámka: Samotná hra bude v angličtině.*
+
+**Customization (Úpravy):**
+
+**POSTAVA**
+Na začátku hry si hráč vybere jednu z minimálně čtyř postav.
+
+**TYPY POSTAV:**
+* The Alchemist
+* The Fortune Cookie
+* The Dragon Smasher
+* The Lamb (Secret Kebabex mode)
+
+Hráč si postavu pojmenuje sám, ale výsledné jméno bude záviset na vybrané třídě. Pokud si hráč vybere postavu „Alchemist“ a pojmenuje se „Arnold“, jeho plné jméno bude „Arnold the Alchemist“. Každá postava má své klady a zápory. Postavy budou vyvážené, ale hlavní rozdíl spočívá ve stylu útoku, obrany, vylepšení a přístupu ke zbraním, brnění, jídlu či magii.
+
+**KULT / KLUB**
+V závislosti na zvolené postavě bude mít hráč na výběr příslušný kult nebo klub. Hráč se stává hlavou svého týmu, který může kdykoli přejmenovat.
+
+**Dostupné frakce:**
+* **The Alchemist:** Gold Diggers Cult / Juda Club
+* **The Fortune Cookie:** Cult of the Cookie Dough / Club of the Donut
+* **The Dragon Smasher:** Super Smash Dragon’s Club / Cult of Mythology
+* **The Lamb:** Cult of the Lamb (Zde není na výběr, protože tajná „Kebabex“ koncovka je dostupná pouze za této podmínky).
+
+Rozdíl spočívá v herním stylu a cílech:
+* **Klub:** Pacifistická cesta – hlavní zbraní je přátelství a láska.
+* **Kult:** Temnější cesta – normou jsou rituální oběti a bitvy na život a na smrt.
+
+**Mechanika vesnice:**
+Po dokončení úprav se hráč objeví ve vesnici své frakce. V průběhu hry se zde budou dít náhodné události (např. požáry), které musí hráč řešit a do budoucna jim předcházet. Ve vesnici je dostupný obchod, jehož nabídka zbraní a brnění se odvíjí od zvolené frakce.
+
+**Vylepšení (Upgrady):**
+Dostupnost vylepšení přímo závisí na kombinaci postavy a frakce. Například:
+* **Postava:** The Lamb | **Frakce:** Cult of the Lamb
+* **Brnění:** Wool Armour, Cotton Armour, Cute Energy Armour, Faith Armour
+* **Zbraně:** Žádné (v souladu s pacifistickým stylem).
+
+---
+
+## Shrnutí konceptu (shrnutí napsáno pomocí AI)
+
+Jedná se o textové ASCII RPG, kde si hráč vybírá ze čtyř postav (Alchemist, Fortune Cookie, Dragon Smasher a tajný Lamb), ke kterým následně volí buď mírumilovný **Klub**, nebo agresivní **Kult**. Volba frakce zásadně ovlivňuje hratelnost, cíle a dostupné vybavení. Centrálním bodem hry je správa a ochrana vlastní **vesnice**, kde hráč řeší krizové události a nakupuje specifické upgrady odpovídající jeho hernímu stylu.
