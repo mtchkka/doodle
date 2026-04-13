@@ -1,4 +1,4 @@
-**RPG Hra This or That - The Cult, the Club**
+**RPG Hra "This or That - The Cult, the Club"**
 
 Předtím, než začnu psát jakýkoli kód, je zapotřebí mít strukturu nebo alespoň nápad, co budu programovat.
 
