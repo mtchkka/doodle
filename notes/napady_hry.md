@@ -39,7 +39,7 @@ Po dokončení úprav se hráč objeví ve vesnici své frakce. V průběhu hry 
 Dostupnost vylepšení přímo závisí na kombinaci postavy a frakce. Například:
 * **Postava:** The Lamb | **Frakce:** Cult of the Lamb
 * **Brnění:** Wool Armour, Cotton Armour, Cute Energy Armour, Faith Armour
-* **Zbraně:** Žádné (v souladu s pacifistickým stylem).
+* **Zbraně:** 
 
 ---
 
