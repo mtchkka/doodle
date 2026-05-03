@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <ctime>
 #include <cstdlib>
 #include "player.h"
@@ -7,11 +8,10 @@
 using namespace std;
 
 string newName, name;
+int bookChoice;
 
 void cat() {
     cout << R"(
-      ____
-      |  |
     / \__/ \
    (  ^  ^  )
     \  ==  /

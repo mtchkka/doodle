@@ -3,6 +3,7 @@
 //
 #include "monster.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -22,5 +23,22 @@ Monster spawnMonster(int monsterType) {
             m.xpreward = 10;
             m.loot = "Pink Slimey Goo";
             m.lootAmount = 10;
+            break;
+
+            case 2:
+            m.name = "Gummy Gooner";
+            m.hp;
+            m.maxhp = 40;
+            m.damage - 8;
+            m.attackSpeed = 2;
+            m.defense = 10;
+            m.shield = 20;
+
+            m.xpreward = 35;
+            m.loot = "Gummies", "Gummy Bust";
+            m.lootAmount = 10;
+            break;
+
+
     }
 }

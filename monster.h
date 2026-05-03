@@ -5,6 +5,7 @@
 #ifndef HRA_MONSTER_H
 #define HRA_MONSTER_H
 
+#include <iostream>
 #include <string>
 using namespace std;
 

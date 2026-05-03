@@ -3,8 +3,7 @@ project(Hra)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Hra operations.cpp
-        operations.h
+add_executable(Hra
         main.cpp
         player.h
         player.cpp
@@ -12,4 +11,8 @@ add_executable(Hra operations.cpp
         village.cpp
         monster.h
         monster.cpp
+        wandering.h
+        wandering.cpp
+        miniboss.h
+        miniboss.cpp
 )

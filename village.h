@@ -6,7 +6,9 @@
 #define HRA_VILLAGE_H
 
 #include <string>
+#include <iostream>
 using namespace std;
+
 
 struct Village {
 
