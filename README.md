@@ -1,1 +1,1 @@
-# doodle
+# vsechny soubory jsou v "master"
