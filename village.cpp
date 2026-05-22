@@ -23,6 +23,15 @@ void villageMenu(Village) {
 )";
 }
 
+Choice villageMenuChoice(){
+    Choice c;
+
+    string choice;
+
+    switch (choice){
+case 1:
+    choice = "You decided to go wandering!"
+
 
 Village generateRandVillage() {
 
