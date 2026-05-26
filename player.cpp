@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-void showBook(Character) {
+void showBook(Character player) {
     cout << R"(
     ========== Book of Travel ==|==|====
     |                           |  |   |
@@ -24,7 +24,6 @@ void showBook(Character) {
     cin.get();
 }
 
-int name;
 
 Character createCharacter(int choice) {
     Character newPlayer;

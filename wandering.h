@@ -18,7 +18,7 @@ struct Wandering{
     int monsterSpawnRate;
     int MBamount;
 
-}
+};
 
-Wandering randWanering(int wanderingType);
+Wandering randWandering(int wanderingType);
 #endif //HRA_WANDERING_H
