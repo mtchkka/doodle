@@ -30,7 +30,7 @@ Choice villageMenuChoice(){
 
     switch (choice){
 case 1:
-    choice = "You decided to go wandering!"
+    choice = "You decided to go wandering!";
 
 
 Village generateRandVillage() {

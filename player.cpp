@@ -79,9 +79,9 @@ Character createCharacter(int choice) {
             newPlayer.ability = "Super Shield";
             break;
         default:
-            newPlayer. name = "Invalid";
+            newPlayer.name = "Invalid";
             break;
     }
 
-            return newPlayer;
-    }
+    return newPlayer;
+}
