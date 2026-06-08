@@ -7,22 +7,17 @@
 
 #include <string>
 #include <iostream>
+#include "player.h"
 using namespace std;
 
 
 struct Village {
 
     string name;
-    string description;
-    string location;
-    string type;
-
-    int population;
 
 };
 
-Village generateRandVillage();
-
-void villageMenu(Village);
+void villageMenu(Village v);
+void villageMenuChoice(Character& player);
 
 #endif //HRA_VILLAGE_H

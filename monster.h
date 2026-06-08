@@ -5,22 +5,16 @@
 #ifndef HRA_MONSTER_H
 #define HRA_MONSTER_H
 
-#include <iostream>
 #include <string>
+
 using namespace std;
 
 struct Monster {
-
     string name;
-
     int hp;
-    int maxhp;
     int damage;
-    int attackSpeed;
-    int defense;
-    int shield;
-
-    int xpreward;
+    bool isAlive;
+    
     string loot;
     int lootAmount;
 };

@@ -13,6 +13,6 @@ add_executable(Hra
         monster.cpp
         wandering.h
         wandering.cpp
-        miniboss.h
-        miniboss.cpp
+        fight.h
+        fight.cpp
 )

@@ -4,11 +4,12 @@
 #include <cstdlib>
 #include "player.h"
 #include "village.h"
+#include "wandering.h"
+#include "fight.h"
 
 using namespace std;
 
 string newName, name;
-int bookChoice;
 
 void cat() {
     cout << R"(
@@ -33,20 +34,15 @@ void bookOfTravel() {
 )";
 }
 
-
-
 int main() {
-
     srand(static_cast<unsigned int>(time(0)));
-
     Character myHero;
-
     bool userChose = false;
     char userAccept;
 
     do {
         cout << "\nChoose your Hero:" << endl;
-        cout << "1. Mage\n2. Warrior\n3. Cat Warrior\n4. Boring Warrior" << endl;
+        cout << "1. Mage\n2. Russian Agent\n3. Freddy FazBear\n4. Goy" << endl;
 
         int userChoice;
         cin >> userChoice;
@@ -66,33 +62,56 @@ int main() {
         }
 
         cout << "Here are the stats of the " << myHero.name << endl;
+        cout << myHero.description << endl;
         cout << "HP: " << myHero.hp << endl;
         cout << "Damage: " << myHero.damage << endl;
-        cout << "Mana: " << myHero.mana << endl;
-        cout << "Special Ability: " << myHero.ability << endl;
+        cout << "Weapon: " << myHero.weaponName << " (+ " << myHero.weaponDamage << ")" << endl;
+        cout << "Armor: " << myHero.armorName << " (+ " << myHero.armorDefense << ")" << endl;
 
-        cout << "Do you accept this role? {Y/N}" << endl;
+        cout << "\nDo you accept this role? {Y/N}" << endl;
         cin >> userAccept;
 
-        if (userAccept == 'Y' || userAccept == 'y')
-        userChose = true;
+        if (userAccept == 'Y' || userAccept == 'y') userChose = true;
 
     } while (userChose == false);
 
     cout << "Now tell me, what is your name?" << endl;
     cin >> name;
-    myHero.playerName = name + " The " + myHero.name;
+    myHero.playerName = name + " the " + myHero.name;
 
     cout << "\nYou begin The Journey as a " << myHero.playerName << ".\n" << endl;
 
-    Village currentVillage = generateRandVillage();
+    cout << "You finally arrive at your hometown: " << myHero.spawnVillage << "!" << endl;
+    cout << "Here is a Book of Travel that might help you in your journey." << endl;
 
-    cout << "You spawned in a " << currentVillage.name << "!" << endl;
-    cout << "Here is a Book of Travel that might help you in your journey" << endl;
     showBook(myHero);
 
-    cout << "To access the Book of Travel, you must be in a village.\n" << endl;
-    cout << "As of now, you are in a village, what would you prefer to do?\n"<<endl;
-    villageMenu(currentVillage);
+    bool gameRunning = true;
 
+    while (gameRunning && myHero.hp > 0) {
+
+        villageMenuChoice(myHero);
+
+        if (myHero.hp > 0) {
+            Wandering theWilds;
+            theWilds.name = "The Dangerous Wilds";
+            theWilds.monsterSpawnRate = 100;
+
+            enterRoom(myHero, theWilds);
+
+            if (myHero.miniBossesDefeated == 4) {
+                cout << "\n==================================================" << endl;
+                cout << " CONGRATULATIONS, " << myHero.playerName << "!" << endl;
+                cout << " YOU DESTROYED KEBABEX, YOU WON!" << endl;
+                cout << "==================================================" << endl;
+                gameRunning = false;
+            }
+        }
+    }
+
+    if (myHero.hp <= 0) {
+        cout << "\nYour journey ends here. Rest in peace, " << myHero.playerName << "." << endl;
+    }
+
+    return 0;
 }

@@ -1,15 +1,15 @@
 //
 // Created by matve on 24-Apr-26.
 //
-#include "Village.h"
+#include "village.h"
+#include "player.h"
 #include <iostream>
 #include <string>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
 
-void villageMenu(Village) {
+void villageMenu(Village v) {
+    cout << "\n--- " << v.name << " ---" << endl;
     cout << R"(
     ~_--~..=~--~~.,,==_--__-_
    !  1. Go Wander           1
@@ -20,47 +20,50 @@ void villageMenu(Village) {
    ]                         1
    !            4. Wise Cat  )
    "__=~~..,==--_-=~=~.--__-"
-)";
+)" << endl;
 }
 
-Choice villageMenuChoice(){
-    Choice c;
-
-    string choice;
-
-    switch (choice){
-case 1:
-    choice = "You decided to go wandering!";
-
-
-Village generateRandVillage() {
+void villageMenuChoice(Character& player) {
+    bool inVillage = true;
 
     Village v;
+    v.name = player.spawnVillage;
 
-    int roll = rand() % 3;
+    while (inVillage) {
+        villageMenu(v);
 
-    switch (roll) {
-        case 0:
-            v.name = "Fortress";
-            v.description = "Fortress";
-            v.location = "Fortress";
-            v.type = "Mountain Fortress";
-            v.population = 30;
-            break;
-        case 1:
-            v.name = "Village by The Lake";
-            v.description = "Fortress";
-            v.location = "Fortress";
-            v.type = "Mountain Fortress";
-            v.population = 30;
-            break;
-        case 2:
-            v.name = "Muriom";
-            v.description = "Fortress";
-            v.location = "Fortress";
-            v.type = "Mountain Fortress";
-            v.population = 30;
-            break;
+        int choice;
+        cout << "What would you like to do? ";
+        cin >> choice;
+
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(1000, '\n');
+            cout << "Invalid choice." << endl;
+            continue;
+        }
+
+        switch (choice) {
+            case 1:
+                cout << "\nYou step out of the gates to wander the wilds..." << endl;
+                inVillage = false;
+                break;
+            case 2:
+                cout << "\nYou open your Book of Travel" << endl;
+                showBook(player);
+                break;
+            case 3:
+                cout << "\nYou walk into the Blacksmith" << endl;
+                showWeaponUpgrade(player);
+                break;
+            case 4:
+                cout << "\nYou approach the Wise Cat" << endl;
+                cout << "Cat: \"Meow.\"" << endl;
+                cout << "(It goes back to sleep. Very wise.)" << endl;
+                break;
+            default:
+                cout << "Invalid choice. Please pick 1-4." << endl;
+                break;
+        }
     }
-    return v;
 }
